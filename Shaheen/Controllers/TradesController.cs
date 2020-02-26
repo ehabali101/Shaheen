@@ -59,7 +59,8 @@ namespace Shaheen.Controllers
             {
                 _context.Add(trade);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", new { id = trade.Id });
             }
             return View(trade);
         }

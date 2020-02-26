@@ -1,4 +1,5 @@
 ﻿@model Shaheen.Models.Trade
+@using Neodynamic.SDK.BarcodeCore
 
 @{
     ViewData["Title"] = "Details";
@@ -60,7 +61,10 @@
             @Html.DisplayFor(model => model.SupplierName)
         </dd>
     </dl>
+    
+    @Html.Raw(BarcodeHtmlHelper.EmbedBarcodeImage("S=" + Symbology.QRCode.ToString() + "&C=" + @Model.Id, HtmlImageFormat.Png, "Barcode", "", ""))
 </div>
+<br />
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">تعديل</a> |
     <a asp-action="Index">العودة الي القائمة</a>
