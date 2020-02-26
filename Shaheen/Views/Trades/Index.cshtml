@@ -5,19 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>شهادات اختبار للمواصفات والمقاييس السعودية</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">سجل جديد</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.TradeName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ManufactureCompany)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AdditionalInfo)
@@ -30,12 +27,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TestCertificateNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SupplierCommercialRegistry)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SupplierName)
             </th>
             <th></th>
         </tr>
@@ -50,9 +41,6 @@
                 @Html.DisplayFor(modelItem => item.ManufactureCompany)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AdditionalInfo)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.TestCertificateIssuer)
             </td>
             <td>
@@ -62,15 +50,9 @@
                 @Html.DisplayFor(modelItem => item.TestCertificateNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SupplierCommercialRegistry)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupplierName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">تعديل</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">التفاصيل</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
             </td>
         </tr>
 }

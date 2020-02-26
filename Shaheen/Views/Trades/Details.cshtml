@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>التفاصيل</h2>
 
 <div>
-    <h4>Trade</h4>
+    <h4>شهادة اختبار للمواصفات والمقاييس السعودية</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
             @Html.DisplayNameFor(model => model.TradeName)
         </dt>
@@ -62,6 +62,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">تعديل</a> |
+    <a asp-action="Index">العودة الي القائمة</a>
 </div>
