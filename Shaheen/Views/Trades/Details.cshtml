@@ -1,0 +1,67 @@
+﻿@model Shaheen.Models.Trade
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TradeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TradeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ManufactureCompany)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ManufactureCompany)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInfo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInfo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TestCertificateIssuer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestCertificateIssuer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TestReportNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestReportNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TestCertificateNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestCertificateNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierCommercialRegistry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierCommercialRegistry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

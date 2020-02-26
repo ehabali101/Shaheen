@@ -1,0 +1,69 @@
+﻿@model Shaheen.Models.Trade
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>سجل جديد</h2>
+
+<h4>الشهادات</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TradeName" class="control-label">اسم العلامة التجارية</label>
+                <input asp-for="TradeName" class="form-control" />
+                <span asp-validation-for="TradeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufactureCompany" class="control-label">الشركة المصنعة</label>
+                <input asp-for="ManufactureCompany" class="form-control" />
+                <span asp-validation-for="ManufactureCompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalInfo" class="control-label">معلومات اضافية</label>
+                <input asp-for="AdditionalInfo" class="form-control" />
+                <span asp-validation-for="AdditionalInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCertificateIssuer" class="control-label">جهة اصدار شهادة الاختبار</label>
+                <input asp-for="TestCertificateIssuer" class="form-control" />
+                <span asp-validation-for="TestCertificateIssuer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestReportNumber" class="control-label">رقم التقرير</label>
+                <input asp-for="TestReportNumber" class="form-control" />
+                <span asp-validation-for="TestReportNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCertificateNumber" class="control-label">رقم شهادة الاختبار</label>
+                <input asp-for="TestCertificateNumber" class="form-control" />
+                <span asp-validation-for="TestCertificateNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierCommercialRegistry" class="control-label">السجل التجاري للمورد</label>
+                <input asp-for="SupplierCommercialRegistry" class="form-control" />
+                <span asp-validation-for="SupplierCommercialRegistry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierName" class="control-label">اسم المورد</label>
+                <input asp-for="SupplierName" class="form-control" />
+                <span asp-validation-for="SupplierName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
