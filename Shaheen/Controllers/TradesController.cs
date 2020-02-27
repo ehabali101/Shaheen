@@ -42,6 +42,24 @@ namespace Shaheen.Controllers
             return View(trade);
         }
 
+        // GET: Trades/Certificate/5
+        public async Task<IActionResult> Certificate(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var trade = await _context.Trade
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (trade == null)
+            {
+                return NotFound();
+            }
+
+            return View(trade);
+        }
+
         // GET: Trades/Create
         public IActionResult Create()
         {

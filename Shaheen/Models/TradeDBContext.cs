@@ -13,8 +13,6 @@ namespace Shaheen.Models
         {
         }
 
-        public DbSet<TradeDetail> TradeDetails { get; set; }
-
         public DbSet<Shaheen.Models.Trade> Trade { get; set; }
     }
 }

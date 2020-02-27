@@ -50,5 +50,20 @@ namespace Shaheen.Models
         [Display(Name = "اسم المورد")]
         public string SupplierName { get; set; }
 
+        [Required(ErrorMessage = "*")]
+        [StringLength(250)]
+        [Display(Name = "بلد المنشأ")]
+        public string OriginCountry { get; set; }
+
+        [Required(ErrorMessage = "*")]
+        [StringLength(250)]
+        [Display(Name = "الطراز")]
+        public string Make { get; set; }
+
+        [Required(ErrorMessage = "*")]
+        [StringLength(250)]
+        [Display(Name = "الحالة")]
+        public string Condition { get; set; }
+
     }
 }

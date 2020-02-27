@@ -1,0 +1,60 @@
+﻿
+@model Shaheen.Models.Trade
+
+@{
+    ViewData["Title"] = "Certificate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TradeName" class="control-label"></label>
+                <input asp-for="TradeName" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufactureCompany" class="control-label"></label>
+                <input asp-for="ManufactureCompany" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalInfo" class="control-label"></label>
+                <input asp-for="AdditionalInfo" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCertificateIssuer" class="control-label"></label>
+                <input asp-for="TestCertificateIssuer" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestReportNumber" class="control-label"></label>
+                <input asp-for="TestReportNumber" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCertificateNumber" class="control-label"></label>
+                <input asp-for="TestCertificateNumber" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierCommercialRegistry" class="control-label"></label>
+                <input asp-for="SupplierCommercialRegistry" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierName" class="control-label"></label>
+                <input asp-for="SupplierName" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="OriginCountry" class="control-label"></label>
+                <input asp-for="OriginCountry" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Make" class="control-label"></label>
+                <input asp-for="Make" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Condition" class="control-label"></label>
+                <input asp-for="Condition" class="form-control" readonly/>
+            </div>      
+    </div>
+</div>
+
